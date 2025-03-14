@@ -1,0 +1,62 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+Pipfile
+Pipfile.lock
+
+# Jupyter Notebook checkpoints and metadata
+.ipynb_checkpoints/
+.cache/
+
+# Editor and IDE settings 
+.vscode/
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Environment variables
+.env
+
+# Log files and temporary files
+*.log
+*.tmp
+
+# temp files
+temp/
+temp*.*
+
+# Ignore the data directory
+data/
