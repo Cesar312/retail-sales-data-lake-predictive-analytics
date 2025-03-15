@@ -7,3 +7,12 @@ This repository contains the end-to-end process of ingesting, cleaning, transfor
 * Overview
 * Dataset
 * Technologies Used
+* Project Structure
+* Data Lake Architecture
+* Data Preparation
+* Data Analysis
+* Visulizations & Dashboard
+* Prediction Model
+
+## Overview
+
