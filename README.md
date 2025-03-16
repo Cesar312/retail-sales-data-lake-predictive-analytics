@@ -11,8 +11,26 @@ This repository contains the end-to-end process of ingesting, cleaning, transfor
 * Data Lake Architecture
 * Data Preparation
 * Data Analysis
-* Visulizations & Dashboard
+* Visualizations & Dashboard
 * Prediction Model
 
 ## Overview
+
+This project demonstrates how to build a data lake and apply data engineering and analysis techniques using PySpark on Databricks. The steps include:
+1. **Storing the raw CSV data** in a data lake location (Databricks File System).
+2. **Cleaning and transforming** the data.
+3. **Analyzing** the data with SQL queries and PySpark DataFrames.
+4. **Creating a dashboard** to visualize key metrics and trends from the sales data.
+
+## Dataset
+
+The raw CSV files contain the following fields:
+- **Order ID**
+- **Product**
+- **Quantity Ordered**
+- **Price Each**
+- **Order Date**
+- **Purchase Address**
+
+You can find more details on the columns and data in the Retail-Sales-Data-Preparation.ipynb notebook and the SQL scripts.
 
