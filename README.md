@@ -1,8 +1,8 @@
-# Retail Sales Data Lake, Analytics, & Prediction Model  
+# Retail Sales Data Lake, Analytics & Prediction Model  
 
 This repository contains the end-to-end process of ingesting, cleaning, transforming, analyzing, and predicting sales trends from a retail store. The analysis and transformation were performed on a Databricks cluster using PySpark and SQL, amd using MLflow to track machine learning experiments for predictive modeling.
 
-***Last Modified Date***: 2025-03-17  
+***Last Modified Date***: 2025-03-18  
 
 ## Table of Contents  
 - [Overview](#overview)
@@ -106,7 +106,23 @@ The final step was creating a dashboard in Databricks to visualize:
 
 
 ### How to Reproduce  
-
+1. **Clone Repository**  
+   `git clone https://github.com/Cesar312/retail-sales-data-lake-predictive-analytics.git`
+2. **Create Databricks Clusters**  
+   - Standard cluster for the EDA and SQL queries
+   - ML cluster for model training, experiment tracking, and deployment of the prediction model  
+3. **Upload Data to Databricks**  
+   - Upload raw CSV files to `dbfs:/FileStore/salesdata/input/`
+4. **Run the PySpark Notebook**  
+   - Open `Retail-Sales-Data-Preparation.ipynb`
+   - Execute cells to clean and publish data
+5. **Train the Model**  
+   - Open `Retail-Sales-Predictive-Analytics.ipynb`
+   - Execute cells to train and track experiments
+   - View the evaluation metrics in MLflow UI
+6. **Predict Future Sales**  
+   - Load the trained model
+   - Make predictions for new months
 
 ### Future Improvements  
 
