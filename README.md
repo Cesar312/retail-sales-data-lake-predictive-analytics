@@ -1,6 +1,6 @@
 # Retail Sales Data Lake, Analytics & Prediction Model  
 
-This repository contains the end-to-end process of ingesting, cleaning, transforming, analyzing, and predicting sales trends from a retail store. The analysis and transformation were performed on a Databricks cluster using PySpark and SQL, amd using MLflow to track machine learning experiments for predictive modeling.
+This repository contains the end-to-end process of ingesting, cleaning, transforming, analyzing, and predicting sales trends from a retail store. The analysis and transformation were performed on Databricks clusters using PySpark and SQL, and using MLflow to track machine learning experiments for predictive modeling.
 
 ***Last Modified Date***: 2025-03-18  
 
@@ -20,13 +20,13 @@ This repository contains the end-to-end process of ingesting, cleaning, transfor
 
 ### Overview  
 This project demonstrates how to: 
-1. **Store and clean raw sales data** in a **data lake** (Databricks FileStore).
-2. **Analyze and visualize** trends using **PySpark DataFrames** and **SQL queries**.
-3. **Predict future sales trends** using **Machine Learning with MLflow tracking**.
-4. **Deploy the trained model** to predict sales for upcoming months.
+- **Store and clean raw sales data** in a **data lake** (Databricks FileStore).
+- **Analyze and visualize** trends using **PySpark DataFrames** and **SQL queries**.
+- **Predict future sales trends** using **Machine Learning with MLflow tracking**.
+- **Deploy the trained model** to predict sales for upcoming months.
 
 ### Dataset  
-The dataset contains:
+The dataset contains the following features:
 - **Order ID**
 - **Product**
 - **Quantity Ordered**
@@ -35,10 +35,10 @@ The dataset contains:
 - **Purchase Address**
 - **Derived Features: City, State, ReportYear, ReportMonth**
 
-You can find more details on the columns and data in the Retail-Sales-Data-Preparation.ipynb notebook and the SQL scripts.
+You can find more details on the columns and data in the `Retail-Sales-Data-Preparation.ipynb` notebook and the SQL scripts.
 
 ### Technologies Used  
-- **Databricks** for cluster management, notebooks, and SQL analytics
+- **Databricks** for cluster management, notebooks, SQL analytics, experiment tracking, and deployment
 - **PySpark** for data manipulation and transformations
 - **SQL** (Databricks SQL) for analytical queries
 - **Databricks Files System (DBFS)** as the data lake storage location
@@ -71,7 +71,7 @@ With PySpark, we predict monthly sales by city using a linear regression model. 
 - **Analyze**  
   - The published data is queried via Databricks SQL or Spark DataFrames, enabling fast aggregations and computations.  
 - **Prediction**  
-  - Using PySpark ML, a pipeline transforms features into a format suitable for ML model training,
+  - Using PySpark ML, a pipeline transforms features into a format suitable for ML model training.
   - Define a linear regression model to a workflow that predicts retail sales while tracking the experiments with evaluation metrics and logging.
 - **Deployment**
   - From the MLflow tracking server, access the trained model to make real-time predictions. 
@@ -87,11 +87,11 @@ The Retail-Sales-Data-Preparation.ipynb notebook includes:
 
 ### Data Analysis  
 Analysis was performed via PySpark DataFrame APIs and SQL:
-- Exploratory Queries:
+- **Exploratory Queries**
   - Finding total revenue by month
   - Pinpoint peak ordering times 
   - Identifying popular product combinations in sales orders  
-- Advanced Analytics
+- **Advanced Analytics**
   - Partitioning data by Year/Month for efficient queries
   - Summarizing results in aggregated tables  
 
@@ -103,29 +103,36 @@ The final step was creating a dashboard in Databricks to visualize:
 - **Popular Product Combinations**
 
 ### Machine Learning Model & MLflow Tracking   
-
+- Preprocessed the data with feature engineering techniques 
+- Train Linear Regression model to predict monthly sales by city
+- Logged experiments in MLflow with evaluation metrics
+- Saved model and loaded it for future sales predictions
+- Deployed MLflow pipeline to track and compare multiple models
 
 ### How to Reproduce  
-1. **Clone Repository**  
+- **Clone Repository**  
    `git clone https://github.com/Cesar312/retail-sales-data-lake-predictive-analytics.git`
-2. **Create Databricks Clusters**  
+- **Create Databricks Clusters**  
    - Standard cluster for the EDA and SQL queries
    - ML cluster for model training, experiment tracking, and deployment of the prediction model  
-3. **Upload Data to Databricks**  
+- **Upload Data to Databricks**  
    - Upload raw CSV files to `dbfs:/FileStore/salesdata/input/`
-4. **Run the PySpark Notebook**  
+- **Run the PySpark Notebook**  
    - Open `Retail-Sales-Data-Preparation.ipynb`
    - Execute cells to clean and publish data
-5. **Train the Model**  
+- **Train the Model**  
    - Open `Retail-Sales-Predictive-Analytics.ipynb`
    - Execute cells to train and track experiments
    - View the evaluation metrics in MLflow UI
-6. **Predict Future Sales**  
+- **Predict Future Sales**  
    - Load the trained model
    - Make predictions for new months
 
 ### Future Improvements  
-
+- Automate model retraining on new data updates
+- Test advanced models like XGBoost or Time-Series Forecasting
+- Create a backend API microservice to serve predictions by deploying the trained ML model retrieved from the Databricks MLflow registry
+  
 ### License  
 This project is licensed under the MIT License -- see the [LICENSE.txt](LICENSE.txt) file for details.  
 
