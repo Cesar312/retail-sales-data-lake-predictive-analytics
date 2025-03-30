@@ -1,19 +1,36 @@
-# Visualizations
-We were able to produce two sets of visualization within Databricks. 
-1. A collection of MLflow artifacts that captured the evaluation metrics of the prediction model.
-2. A dashboard that provides retail trends based on hourly sales, monthly revenues, geographic breakdown, and product combinations. 
+# Performance Visualizations & Dashboard  
+This section showcases model evaluation visualizations and a dashboard built within the Databricks UI. These tools enhance the interpretability and communication of predictive insights derived from the retail sales dataset. 
 
-## Mean Absolute Error  
+## MLflow Evaluation Metrics  
+Using MLflow, the following regression metrics were tracked for each model run:
+- **Mean Absolute Error** (MAE): Measures the average magnitude of errors in predictions.
+- **Root Mean Square Error** (RMSE): Penalizes larger errors more than MAE.
+- **R<sup>2</sup> Score**: Indicates how well the model explains the variance in the target variable.
+
+All experiments and visualizations are available to view in the MLflow UI directly within Databricks. 
+
+### Mean Absolute Error  
 ![Mean Absolute Error](MAE.png)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend magna sit amet tortor sodales tincidunt. Phasellus varius felis et.  
-## Root Mean Square Error  
-![Root Mean Square Error](RMSE.png)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend magna sit amet tortor sodales tincidunt. Phasellus varius felis et.  
 
-## R<sup>2</sup> Score  
+### Root Mean Square Error  
+![Root Mean Square Error](RMSE.png)
+
+### R<sup>2</sup> Score  
 ![R-squared](R-squared.png)
-The R<sup>2</sup> score Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend magna sit amet tortor sodales tincidunt. Phasellus varius felis et.  
+
+Each visualization reflects performance trends across training runs, allowing transparent analysis of model behavior. 
 
 ## Databricks Dashboard  
+A custom dashboard was built in the Databricks SQL UI. The dashboard includes:
+- **Monthly Revenue Trends**
+- **Peak Ordering Times**
+- **Geographic Breakdown of Orders**
+- **Popular Product Combinations**  
+
+These charts were sourced from queries written in:
+- **Retail-Sales-Queries.sql**
+- **Retail-Sales-Analytics.sql**
+
+The dashboard allows dynamic filtering by month, product, or location, and was used to communicate final insights to the stakeholders.  
+
 ![Dashboard](Retail-Sales-Databricks-Dashboard.png)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend magna sit amet tortor sodales tincidunt. Phasellus varius felis et.
