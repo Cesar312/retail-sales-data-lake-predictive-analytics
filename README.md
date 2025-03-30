@@ -2,7 +2,7 @@
 
 This repository contains the end-to-end process of ingesting, cleaning, transforming, analyzing, and predicting sales trends from a retail store. The analysis and transformation were performed on Databricks clusters using PySpark and SQL, and using MLflow to track machine learning experiments for predictive modeling.
 
-***Last Modified Date***: 2025-03-18  
+***Last Modified Date***: 2025-03-31  
 
 ## Table of Contents  
 - [Overview](#overview)
