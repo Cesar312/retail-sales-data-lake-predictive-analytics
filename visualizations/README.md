@@ -28,8 +28,8 @@ A custom dashboard was built in the Databricks SQL UI. The dashboard includes:
 - **Popular Product Combinations**  
 
 These charts were sourced from queries written in:
-- **Retail-Sales-Queries.sql**
-- **Retail-Sales-Analytics.sql**
+- **[Retail-Sales-Queries.sql](../sql/Retail-Sales-Queries.sql)**
+- **[Retail-Sales-Analytics.sql](../sql/Retail-Sales-Analytics.sql)**
 
 The dashboard allows dynamic filtering by month, product, or location, and was used to communicate final insights to the stakeholders.  
 
