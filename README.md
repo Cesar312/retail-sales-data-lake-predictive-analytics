@@ -2,7 +2,7 @@
 
 This repository contains the end-to-end process of ingesting, cleaning, transforming, analyzing, and predicting sales trends from a retail store. The analysis and transformation were performed on Databricks clusters using PySpark and SQL, and using MLflow to track machine learning experiments for predictive modeling.
 
-***Last Modified Date***: 2025-03-31  
+***Last Modified Date***: 2025-04-01  
 
 ## Table of Contents  
 - [Overview](#overview)
@@ -35,7 +35,7 @@ The dataset contains the following features:
 - **Purchase Address**
 - **Derived Features: City, State, ReportYear, ReportMonth**
 
-You can find more details on the columns and data in the `Retail-Sales-Data-Preparation.ipynb` notebook and the SQL scripts.
+You can find more details on the columns and data in the [Retail-Sales-Data-Preparation.ipynb](Retail-Sales-Data-Preparation.ipynb) notebook and the SQL scripts.
 
 ### Technologies Used  
 - **Databricks** for cluster management, notebooks, SQL analytics, experiment tracking, and deployment
