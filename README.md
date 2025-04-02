@@ -2,8 +2,6 @@
 
 This repository contains the end-to-end process of ingesting, cleaning, transforming, analyzing, and predicting sales trends from a retail store. The analysis and transformation were performed on Databricks clusters using PySpark and SQL, and using MLflow to track machine learning experiments for predictive modeling.
 
-***Last Modified Date***: 2025-04-01  
-
 ## Table of Contents  
 - [Overview](#overview)
 - [Dataset](#dataset)
@@ -47,13 +45,13 @@ You can find more details on the columns and data in the [Retail-Sales-Data-Prep
 - **Scikit-learn** for the prediction model
 
 ### Project Structure  
-- **Retail-Sales-Data_Preparation.ipynb**  
+- **[Retail-Sales-Data_Preparation.ipynb](Retail-Sales-Data-Preparation.ipynb)**  
 Contains the PySpark code for reading the raw CSV data, cleaning columns, handling missing values, and applying transformations.
-- **Retail-Sales-Queries.sql**  
+- **[Retail-Sales-Queries.sql](./sql/Retail-Sales-Queries.sql)**  
 A collection of SQL queries that explore the sales data, run summary statistics, and handle intermediate analysis steps.
-- **Retail-Sales-Analytics.sql**  
+- **[Retail-Sales-Analytics.sql](./sql/Retail-Sales-Analytics.sql)**  
 The final set of SQL queries that derive key business metrics, such as monthly sales, product-level aggregations, and top-selling categories.
-- **Retail-Sales-Predictive-Analytics.ipynb**  
+- **[Retail-Sales-Predictive-Analytics.ipynb](Retail-Sales-Predictive-Analytics.ipynb)**  
 With PySpark, we predict monthly sales by city using a linear regression model. The experiments were tracked using MLflow, and the trained model was saved for future predictions.
 
 ### Data Lake Architecture  
@@ -140,3 +138,5 @@ This project is licensed under the MIT License -- see the [LICENSE.txt](LICENSE.
 This project was developed and executed using [Databricks Community Edition](https://community.cloud.databricks.com/).
 The code and queries are shared for educational purposes. Databricks itself is a proprietary platform, and
 this repository does not include any proprietary Databricks software.
+
+###### Last Modified Date: 2025-04-01  
